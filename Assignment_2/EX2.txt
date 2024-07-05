@@ -1,0 +1,20 @@
+#include <stdio.h>
+void main()
+{
+    int array_no=0;float array_avg=0;
+    printf("enter no. of elements: ");
+    scanf("%d",&array_no);
+    float array_1[array_no];
+   for(int i =0 ; i<array_no ; i++)
+   {
+      printf("enter element no.[%d]: ",i+1);
+      scanf("%f",&array_1[i]);
+   }
+
+   printf("the AVG. of elements equal:\n");
+   for(int i =0 ; i<array_no ; i++)
+   {
+          array_avg+=array_1[i];
+   }
+   printf("%0.2f",(array_avg/array_no));
+}

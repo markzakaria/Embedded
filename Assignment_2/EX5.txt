@@ -1,0 +1,20 @@
+#include <stdio.h>
+void main()
+{
+    int elements=0;float element=0;
+    int loc=0;
+    printf("enter no. of elements: ");
+    scanf("%d\n",&elements);
+    float matrix_1[elements];
+    for(int i =0 ; i<elements ; i++)
+   {
+      scanf("%f",&matrix_1[i]);
+   }
+  printf("enter element to be searched: ");
+  scanf("%f",&element);
+    for(int i =0 ; i<elements ; i++)
+   {
+       if (matrix_1[i]==element)
+        printf("element found at %d ",i+1);
+   }
+}
