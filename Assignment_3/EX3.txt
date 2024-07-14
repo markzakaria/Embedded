@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int reverse(char strng[],int,int,int);
+int main() {
+    printf("enter a sentence: ");
+    char arr[100];
+    fgets(arr,100,stdin);
+    int i=strlen(arr)-2;
+    int j=0;int z=((strlen(arr)-1)/2);
+    if(reverse(arr,i,j,z))
+      printf("%s",arr);
+    return 0;
+}
+int reverse(char strng[],int x,int y,int z)
+{
+    char c=strng[x];
+    strng[x]=strng[y]; strng[y]=c;
+
+    if(y<z)
+    {
+    printf("%d: %c --> %c\n",y,strng[y],strng[x]);
+    reverse(strng,--x,++y,z);
+    }
+    return 1;
+}
