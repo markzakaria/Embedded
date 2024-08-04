@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define pi 3.14
+struct SArea{
+float radius;
+}circle;
+void main(){
+printf("enter the radius: ");
+fflush(stdin);
+scanf("%f",&circle.radius);
+printf("Area=%.2f",pi*(circle.radius)*(circle.radius));
+}
+

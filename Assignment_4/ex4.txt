@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+struct Sstudent{
+char name[20];
+int roll;
+float mark;
+};
+struct Sstudent stu[10];
+void main(){
+printf("Taking information of students:\n");
+    int count=0;
+    do{
+printf("enter student name: ");
+fflush(stdin);
+fgets(stu[count].name,20,stdin);
+printf("enter student roll no. : ");
+scanf("%d",&stu[count].roll);
+printf("enter student marks: ");
+scanf("%f",&stu[count].mark);
+count++;
+    }while(count<10);
+    printf("Displaying information of students:\n");
+    for(int i=0;i<10;i++){
+        printf("name: %sRoll: %d\nMarks: %.2f\n",stu[i].name,stu[i].roll,stu[i].mark);
+    }
+}
+

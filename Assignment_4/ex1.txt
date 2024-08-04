@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+struct Sstudent{
+char name[20];
+int roll;
+float mark;
+}stu;
+void main(){
+printf("enter student name: ");
+fgets(stu.name,20,stdin);
+printf("enter student roll no. : ");
+scanf("%d",&stu.roll);
+printf("enter student marks: ");
+scanf("%f",&stu.mark);
+printf("name: %sRoll: %d\nMarks: %.2f",stu.name,stu.roll,stu.mark);
+}
+

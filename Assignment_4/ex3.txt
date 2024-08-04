@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+struct Scomplx{
+float real;
+float img;
+}complxnum;
+struct Scomplx ADD(struct Scomplx C1,struct Scomplx C2){
+    complxnum.real=C1.real+C2.real;
+    complxnum.img=C1.img+C2.img;
+    return complxnum;
+};
+void main(){
+    struct Scomplx X1;
+    struct Scomplx X2;
+printf("enter real and imaginary for 1st complex no. : ");
+scanf("%f",&X1.real);
+scanf("%f",&X1.img);
+printf("enter real and imaginary for 2nd complex no. : ");
+scanf("%f",&X2.real);
+scanf("%f",&X2.img);
+printf("SUM= %.1f + %.1fi",ADD(X1,X2).real,ADD(X1,X2).img);
+}
+
