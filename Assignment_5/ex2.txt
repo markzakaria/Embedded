@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    char c[28];
+    int b=65;
+    for(int i=0;i<26;i++,b++){
+        c[i]=b;
+    }
+    char* ab=c;
+    printf("the Alphabets are: \n");
+    for(int i=0;i<26;i++,ab++){
+        printf("%c\t",*ab);
+    }
+    return 0;
+}

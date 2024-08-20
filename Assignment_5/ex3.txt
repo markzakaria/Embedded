@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char c[30];
+    printf("Input a string\n");
+    fgets(c,30,stdin);
+    int i=0;
+    char* ab=NULL;
+    while(c[i]!='\0'){
+    i++;
+    }
+    ab=&c[i-2];
+    
+    printf("the reverse of string is: "); 
+    do{
+       printf("%c",*ab);
+       ab--;
+       i--;
+    }while(i!=0);
+    
+    return 0;
+}

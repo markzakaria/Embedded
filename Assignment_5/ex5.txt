@@ -1,0 +1,14 @@
+#include <stdio.h>
+struct Semployee{
+char x[20];
+int a;
+};
+int main(){
+    struct Semployee emp={"Alex",1002};
+   struct Semployee(*Sptr[])={&emp};
+
+     printf("Employee Name: %s\n",((*Sptr))->x);
+     printf("Employee ID: %d",((*Sptr))->a);
+return 0;
+}
+
