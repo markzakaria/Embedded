@@ -1,0 +1,273 @@
+15:24:15 **** Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+    564	      0	   1568	   2132	    854	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:28:53 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:21:10: fatal error: PlatformTypes.h: No such file or directory
+   21 | #include <PlatformTypes.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:31:12 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   31 |     printf("%d",data1);
+      |     ^~~~~~
+../Src/main.c:22:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   21 | #include <Platform_Types.h>
+  +++ |+#include <stdio.h>
+   22 | 
+../Src/main.c:31:5: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   31 |     printf("%d",data1);
+      |     ^~~~~~
+../Src/main.c:31:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4592	     92	   1900	   6584	   19b8	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:32:32 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4592	     92	   1900	   6584	   19b8	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:44:37 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4596	     92	   1900	   6588	   19bc	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:48:11 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:11: warning: variable 'data2' set but not used [-Wunused-but-set-variable]
+   31 |     sint8 data2;
+      |           ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4604	     92	   1900	   6596	   19c4	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:49:48 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O3 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:11: warning: variable 'data2' set but not used [-Wunused-but-set-variable]
+   31 |     sint8 data2;
+      |           ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4580	     92	   1900	   6572	   19ac	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:51:00 **** Clean-only build of configuration Debug for project LED1 ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f103c6tx.d ./Startup/startup_stm32f103c6tx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf LED1.elf LED1.list LED1.map default.size.stdout
+ 
+15:51:00 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:11: warning: variable 'data2' set but not used [-Wunused-but-set-variable]
+   31 |     sint8 data2;
+      |           ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4604	     92	   1900	   6596	   19c4	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+15:53:02 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:20: warning: variable 'data2' set but not used [-Wunused-but-set-variable]
+   31 |     volatile sint8 data2;
+      |                    ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4604	     92	   1900	   6596	   19c4	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+16:03:25 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:42:20: warning: variable 'data2' set but not used [-Wunused-but-set-variable]
+   42 |     volatile sint8 data2;
+      |                    ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+   4600	     92	   1900	   6592	   19c0	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+20:00:55 **** Clean-only build of configuration Debug for project LED1 ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f103c6tx.d ./Startup/startup_stm32f103c6tx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf LED1.elf LED1.list LED1.map default.size.stdout
+ 
+20:00:59 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c:40:37: error: unknown type name 'RODR_t'
+   40 | volatile R_ODR_t* R_ODR = (volatile RODR_t*)(GPIO_base + 0x0C);
+      |                                     ^~~~~~
+../Src/main.c: In function 'main':
+../Src/main.c:48:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   48 |         for (int var = 0; var < 5000; ++var);
+      |         ^~~
+../Src/main.c:49:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   49 |                 R_ODR->pin.pin_13 =0;   //reset bit 13
+      |                 ^~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+20:02:23 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:48:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   48 |         for (int var = 0; var < 5000; ++var);
+      |         ^~~
+../Src/main.c:49:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   49 |                 R_ODR->pin.pin_13 =0;   //reset bit 13
+      |                 ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+   text	   data	    bss	    dec	    hex	filename
+    680	      4	   1564	   2248	    8c8	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+20:13:56 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+arm-none-eabi-objcopy  -O ihex LED1.elf  "LED1.hex"
+arm-none-eabi-objcopy  -O binary LED1.elf  "LED1.bin"
+   text	   data	    bss	    dec	    hex	filename
+    680	      4	   1564	   2248	    8c8	LED1.elf
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+ 
+Finished building: LED1.bin
+Finished building: LED1.hex
+ 
+ 
+20:19:34 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:48:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   48 |         for (int var = 0; var < 10000; ++var);
+      |         ^~~
+../Src/main.c:49:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   49 |                 R_ODR->pin.pin_13 =0;   //reset bit 13
+      |                 ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+arm-none-eabi-objcopy  -O ihex LED1.elf  "LED1.hex"
+   text	   data	    bss	    dec	    hex	filename
+    680	      4	   1564	   2248	    8c8	LED1.elf
+arm-none-eabi-objcopy  -O binary LED1.elf  "LED1.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+Finished building: LED1.hex
+ 
+Finished building: LED1.bin
+ 
+ 

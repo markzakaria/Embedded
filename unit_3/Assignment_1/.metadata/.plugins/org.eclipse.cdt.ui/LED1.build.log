@@ -1,0 +1,30 @@
+20:19:34 **** Incremental Build of configuration Debug for project LED1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:48:9: warning: this 'for' clause does not guard... [-Wmisleading-indentation]
+   48 |         for (int var = 0; var < 10000; ++var);
+      |         ^~~
+../Src/main.c:49:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'for'
+   49 |                 R_ODR->pin.pin_13 =0;   //reset bit 13
+      |                 ^~~~~
+arm-none-eabi-gcc -o "LED1.elf" @"objects.list"   -mcpu=cortex-m3 -T"G:\Embedded diploma\stmprojects\LED1\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LED1.elf
+ 
+arm-none-eabi-size  LED1.elf 
+arm-none-eabi-objdump -h -S LED1.elf  > "LED1.list"
+arm-none-eabi-objcopy  -O ihex LED1.elf  "LED1.hex"
+   text	   data	    bss	    dec	    hex	filename
+    680	      4	   1564	   2248	    8c8	LED1.elf
+arm-none-eabi-objcopy  -O binary LED1.elf  "LED1.bin"
+Finished building: default.size.stdout
+ 
+Finished building: LED1.list
+Finished building: LED1.hex
+ 
+Finished building: LED1.bin
+ 
+ 
+
+20:19:36 Build Finished. 0 errors, 1 warnings. (took 1s.471ms)
+
