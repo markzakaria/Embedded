@@ -1,8 +1,8 @@
-/*
+/*****************
 2/9/2024
 Mark_Zakaria
 PlatformTypes.h
-*/
+******************/
 #ifndef PLATFORM_TYPE_H_
 #define PLATFORM_TYPE_H_
 
