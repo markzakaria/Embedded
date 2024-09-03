@@ -1,4 +1,3 @@
-#include "Arduino.h"
 /*
 2/9/2024
 Mark_Zakaria
