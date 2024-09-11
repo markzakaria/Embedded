@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 /*
+=======
+/*****************
+>>>>>>> 4c6a0565aa107ea82329f5a08cee1983985f43c3
 2/9/2024
 Mark_Zakaria
 PlatformTypes.h
-*/
+******************/
 #ifndef PLATFORM_TYPE_H_
 #define PLATFORM_TYPE_H_
 
